@@ -3,6 +3,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<title>Manage Landing Page</title>
+		<link rel="stylesheet" href="../../utils.css">
 	</head>
 	<body>
 		<!-- Navbar: Start -->
@@ -34,7 +35,7 @@
 
 			<!-- Mobile Menu -->
 			<div class="md:hidden">
-				<div id="menu" class="absolute flex flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md">
+				<div id="menu" class="absolute flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md">
 					<a href="#">Pricing</a>
 					<a href="#">Product</a>
 					<a href="#">About Us</a>
@@ -266,5 +267,17 @@
 			</div>
 		</footer>
 		<!-- Footer: End -->
+
+		<!-- Hamburger Menu functionality -->
+		<script>
+			const btn = document.getElementById('menu-btn');
+			const nav = document.getElementById('menu');
+
+			btn.addEventListener('click', () => {
+				btn.classList.toggle('open')
+				nav.classList.toggle('flex')
+				nav.classList.toggle('hidden')
+			})
+		</script>
 	</body>
 </html>
